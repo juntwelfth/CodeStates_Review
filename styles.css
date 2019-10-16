@@ -1,0 +1,277 @@
+body {
+  margin-top: 200px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  line-height: 1.6rem;
+}
+
+#top {
+  text-align: center;
+}
+
+.content {
+  margin-top: 100px;
+}
+
+a:link,
+a:visited,
+a:active,
+a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+}
+
+#mainlayout {
+  background-color: rgb(255, 230, 233);
+  border-radius: 50px;
+  margin-left: 400px;
+  margin-right: 400px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.left img {
+  position: fixed;
+  width: 30px;
+  left: 10px;
+  top: 10px;
+}
+
+.right img {
+  position: fixed;
+  width: 30px;
+  right: 10px;
+  top: 10px;
+}
+
+header {
+  margin-top: -80px;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: left;
+}
+
+main {
+  margin-top: -80px;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: left;
+}
+
+main ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+
+ol li {
+  display: block;
+  line-height: initial;
+}
+ol li:before {
+  content: counter(item) " ";
+  counter-increment: item;
+  margin-right: 10px;
+  padding-left: 3px;
+}
+
+ol li:nth-child(odd) {
+  background-color: rgba(222, 200, 244, 0.2);
+}
+
+ol li:nth-child(even) {
+  background-color: rgba(200, 244, 230, 0.1);
+}
+
+#navbar {
+  /* display: block; */
+  position: fixed;
+  background-color: white;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 5px 20px -10px rgb(54, 54, 54);
+}
+
+.layouts {
+  border-radius: 50px;
+}
+
+.html,
+.css,
+.js {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  padding-top: 25px;
+}
+
+.infos {
+  padding: 5px 5px 5px 5px;
+  height: 80px;
+}
+
+.langs {
+  padding: 10px 5px 0px 5px;
+  height: 80px;
+}
+
+.codes {
+  padding: 0;
+  margin-left: 0;
+  list-style: none;
+  width: 50%;
+  padding: 5px;
+  padding-left: 5px;
+}
+
+code ol li {
+  padding: 3px;
+}
+
+main p {
+  background-color: rgba(222, 222, 222, 0.2);
+  border-radius: 3px;
+  font-size: 0.8rem;
+  padding: 2px 6px 2px 6px;
+  display: inline-block;
+  clear: both;
+  margin-bottom: 3px;
+  margin-top: 2px;
+}
+
+main ul li {
+  font-size: 1rem;
+  margin-top: 13px;
+}
+
+header ul li {
+  font-size: 1rem;
+  margin-top: 13px;
+}
+
+main ul p {
+  background-color: rgba(199, 199, 199, 0.3);
+}
+
+.lists ul ul li {
+  background-color: rgba(222, 222, 222, 0.2);
+  border-radius: 3px;
+  padding: 2px 6px 2px 6px;
+  display: inline-block;
+  clear: both;
+  margin-bottom: 3px;
+  margin-top: 2px;
+}
+
+ol.codes li {
+  margin-top: 0;
+}
+
+ol.codes {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+article ul {
+  /* list-style-type: none; */
+  padding-left: 0;
+  padding-bottom: 20px;
+}
+
+article li {
+  padding: 10px;
+}
+
+.tips {
+  background-color: rgba(255, 111, 111, 0.15);
+}
+
+@media (max-width: 1300px) {
+  #navbar {
+    height: 50px;
+    background-color: white;
+  }
+
+  #mainlayout {
+    background-color: rgb(253, 255, 234);
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+    height: 1000px;
+    margin-top: -60px;
+    padding-top: 0;
+  }
+
+  .left img {
+    width: 30px;
+    left: 10px;
+    top: 10px;
+  }
+
+  .right img {
+    width: 30px;
+    right: 10px;
+    top: 10px;
+  }
+
+  header {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.15rem;
+    line-height: 1.3rem;
+  }
+
+  main {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.15rem;
+    line-height: 1.3rem;
+  }
+  .codes {
+    padding: 0;
+    margin-left: 0;
+    list-style: none;
+    width: 80%;
+    padding: 2px;
+    padding-left: 5px;
+  }
+
+  main ul li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 385px) {
+  main {
+    font-size: 1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 1.2rem;
+  }
+  /* 
+  ul,
+  ol {
+    padding: 0;
+    margin-left: 0;
+  } */
+
+  .codes {
+    padding: 0;
+    margin-left: 0;
+    list-style: none;
+    width: 100%;
+    padding: 2px;
+    padding-left: 5px;
+  }
+
+  main ul li {
+    font-size: 0.9rem;
+  }
+}
