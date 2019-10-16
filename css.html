@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CSS Cheat Sheet by juntwelfth</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="left">
+        <a href="index.html"><img src="images/home.svg"/></a>
+      </div>
+      <div class="right">
+        <a href="#"><img src="images/arrow_button.svg"/></a>
+      </div>
+    </nav>
+    <header class="lists">
+      <h6>마지막 수정내용 : CSS Selectors<br />마지막 수정일 : 20190906</h6>
+      <h1 id="top">CSS3</h1>
+      <ul>
+        <li>
+          <a href="#selector">Selector</a>
+          <ul>
+            <li><a href="#universal">*</a></li>
+            <li><a href="#id">#X</a></li>
+            <li><a href="#class">.X</a></li>
+            <li><a href="#type">X</a></li>
+            <li><a href="#descendant">X Y</a></li>
+            <li><a href="#children">X > Y</a></li>
+            <li><a href="#adjacent">X + Y</a></li>
+            <li><a href="#sibling">X ~ Y</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#attributes-selector">Attributes Selector</a>
+          <ul>
+            <li><a href="#title">title</a></li>
+            <li><a href="#href">href</a></li>
+            <li><a href="#href*">href*</a></li>
+            <li><a href="#href^">href^</a></li>
+            <li><a href="#href$">href$</a></li>
+            <li><a href="#data-*">data-*</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#pseudo-class-selector">Pseudo Class Selector</a>
+          <ul>
+            <li><a href="#anchor">Anchor</a></li>
+            <li><a href="#checked">Checked</a></li>
+            <li><a href="#not">Not</a></li>
+            <li><a href="#nth-child">nth-child</a></li>
+            <li><a href="#nth-last-child">nth-last-child</a></li>
+            <li><a href="#nth-of-type">nth-of-type</a></li>
+            <li><a href="#nth-last-of-type">nth-last-of-type</a></li>
+            <li><a href="#first-child">first-child</a></li>
+            <li><a href="#last-child">last-child</a></li>
+            <li><a href="#only-child">only-child</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <main class="content">
+      <section id="selector">
+        <h4>Selector</h4>
+        <article class="universal">
+          <ul>
+            <li>*</li>
+            <p>Universal Selector</p>
+            <br />
+            <p>권장하지 않음</p>
+            <p>브라우저에 과부하 걸림</p>
+            <code>
+              <ol class="codes">
+                <li>* {</li>
+                <li>&nbsp;&nbsp;color: red;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="id">
+          <ul>
+            <li>#X</li>
+            <p>ID Selector</p>
+            <br />
+            <p>유연성 0</p>
+            <p>재활용 불가능</p>
+            <p>찾을 가능성 거의 없는 요소에 적용하기</p>
+            <code>
+              <ol class="codes">
+                <li>#id {</li>
+                <li>&nbsp;&nbsp;color: red;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="class">
+          <ul>
+            <li>.X</li>
+            <p>Class Selector</p>
+            <br />
+            <p>스타일을 한 그룹의 요소에 적용할 때 사용</p>
+            <code>
+              <ol class="codes">
+                <li>.className {</li>
+                <li>&nbsp;&nbsp;color: red;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="type">
+          <ul>
+            <li>X</li>
+            <p>Type Selector</p>
+            <br />
+            <p>페이지의 모든 요소를 대상으로 할 때</p>
+            <code>
+              <ol class="codes">
+                <li>a { color: blue; }</li>
+                <li>ul { margin-left: 0; }</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="descendant">
+          <ul>
+            <li>X Y</li>
+            <p>Descendant Selector</p>
+            <br />
+            <p>선택자를 사용하여 더 상세히 작업할 때</p>
+            <p class="tips">
+              선택자가 X Y Z A B.class 처럼 보이면 작업을 잘못하고 있는 것
+            </p>
+            <code>
+              <ol class="codes">
+                <li>ul li {</li>
+                <li>&nbsp;&nbsp;list-style-type: none;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="children">
+          <ul>
+            <li>X > Y</li>
+            <p>Children Selector</p>
+            <br />
+            <p>직계자식만 선택</p>
+            <p>성능향상</p>
+            <p>자바스크립트 기반 CSS 선택자 엔진으로 추천</p>
+            <code>
+              <ol class="codes">
+                <li>.class > p {</li>
+                <li>&nbsp;&nbsp;color: red;</li>
+                <li>}</li>
+              </ol>
+            </code>
+            <code>
+              <ol class="codes">
+                <li>&lt;section class="class"&gt;</li>
+                <li>&nbsp;&nbsp;&lt;p&gt; Paragraph &lt;/p&gt;</li>
+                <li>&nbsp;&nbsp;&lt;ul&gt;</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt; Paragraph &lt;/p&gt;</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt; Paragraph2 &lt;/p&gt;</li>
+                <li>&nbsp;&nbsp;&lt;/ul&gt;</li>
+                <li>&lt;/section&gt;</li>
+              </ol>
+            </code>
+            <p>위 예제에선 ul안의 p는 선택되지않음</p>
+          </ul>
+        </article>
+        <article class="adjacent">
+          <ul>
+            <li>X + Y</li>
+            <p>Adjacent Selector</p>
+            <br />
+            <p>앞의 요소 바로 뒤에있는 요소'만' 선택</p>
+            <code>
+              <ol class="codes">
+                <li>ul + p {</li>
+                <li>&nbsp;&nbsp;color: red;</li>
+                <li>}</li>
+              </ol>
+            </code>
+            <p>ul뒤에 오는 첫번째 p만 선택</p>
+          </ul>
+        </article>
+        <article class="sibling">
+          <ul>
+            <li>X ~ Y</li>
+            <p>Sibling Selector</p>
+            <br />
+            <p>X 아래 모든 Y요소 선택</p>
+            <code>
+              <ol class="codes">
+                <li>ul ~ p {</li>
+                <li>&nbsp;&nbsp;color: red;</li>
+                <li>}</li>
+              </ol>
+            </code>
+            <p>ul 아래있는 모든 p 요소를 선택</p>
+          </ul>
+        </article>
+      </section>
+      <br /><br />
+      <section id="attributes-selector">
+        <h4>Attributes Selector</h4>
+        <article class="title">
+          <ul>
+            <li>X[title]</li>
+            <br />
+            <code>
+              <ol class="codes">
+                <li>a[title] {</li>
+                <li>&nbsp;&nbsp;color: yellow;</li>
+                <li>}</li>
+              </ol>
+            </code>
+            <p>예제에서 title 속성이 있는 앵커 태그만을 선택</p>
+          </ul>
+        </article>
+        <article class="href">
+          <ul>
+            <li>X[href="google.com"]</li>
+            <p>해당 링크와 연결된 전체 anchor태그 선택</p>
+            <p>융퉁성 없음</p>
+            <p>링크가 www.google.com이면 연결되지않음</p>
+            <br />
+            <code>
+              <ol class="codes">
+                <li>a[href="google.com"] {</li>
+                <li>&nbsp;&nbsp;color: green;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="href*">
+          <ul>
+            <li>X[href*="google.com"]</li>
+            <p>*은 입력값이 속성값 어딘가에 보여야 한다는것을 의미</p>
+            <p>www.google.com, net.google.com 등 적용됨</p>
+            <p>but, 폭넓은 표현이라 구글로 연결되지않을 가능성농후</p>
+            <br />
+            <code>
+              <ol class="codes">
+                <li>a[href*="google.com"] {</li>
+                <li>&nbsp;&nbsp;color: green;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="href^">
+          <ul>
+            <li>X[href^="http"]</li>
+            <p>http로 시작하는 링크와 연결된 anchor태그 선택</p>
+            <p>http://로는 찾아지지않음</p>
+            <br />
+            <code>
+              <ol class="codes">
+                <li>a[href^="http"] {</li>
+                <li>&nbsp;&nbsp;padding: 5px;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="href$">
+          <ul>
+            <li>X[href$=".jpg"]</li>
+            <p>
+              확장자가 jpg(혹은 .jpg로 끝나는 URL)인 링크와 연결된 anchor태그
+              선택
+            </p>
+            <br />
+            <code>
+              <ol class="codes">
+                <li>a[href$=".jpg"] {</li>
+                <li>&nbsp;&nbsp;width: 10px;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="data-*">
+          <ul>
+            <li>X[data-*="image"]</li>
+            <p>image형식의 파일의 링크와 연결된 anchor태그 선택</p>
+            <br />
+            <code>
+              <ol class="codes">
+                <li>a[data-filetype="image"] {</li>
+                <li>&nbsp;&nbsp;color: red;</li>
+                <li>}</li>
+              </ol>
+            </code>
+            <code>
+              <ol class="codes">
+                <li>&lt;a data-filetype="image"&gt;</li>
+              </ol>
+            </code>
+            <p>위와 같이 anchor태그에 data-filetype속성을 사용</p>
+          </ul>
+        </article>
+      </section>
+      <br /><br />
+      <section id="pseudo-class-selector">
+        <h4>Pseudo Class Selector</h4>
+        <article class="anchor">
+          <ul>
+            <p>아래 태그들은 순서대로 쓰는것을 권장</p>
+            <li>X:link</li>
+            <p>모든 링크가 걸린 태그 선택</p>
+            <li>X:visited</li>
+            <p>방문했던 링크 선택</p>
+            <li>X:hover</li>
+            <p>마우스를 올렸을 때</p>
+            <li>X:active</li>
+            <p>마우스를 클릭했을 때</p>
+          </ul>
+        </article>
+        <article class="checked">
+          <ul>
+            <li>X:checked</li>
+            <p>라디오버튼, 체크박스처럼 체크되는 요소를 대상으로 선택</p>
+            <code>
+              <ol class="codes">
+                <li>input[type=radio]:checked {</li>
+                <li>&nbsp;&nbsp;border: 1px solid black;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="not">
+          <ul>
+            <li>X:not(selector)</li>
+            <p>Negation Pseudo Class</p>
+            <br />
+            <p>특정 태그를 제외 후 선택</p>
+            <code>
+              <ol class="codes">
+                <li>body:not(header) {</li>
+                <li>&nbsp;&nbsp;color: black;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="nth-child">
+          <ul>
+            <li>X:nth-child(n)</li>
+            <p>n번째 항목 대상 선택</p>
+            <p>0부터 시작하지 않음</p>
+            <code>
+              <ol class="codes">
+                <li>li:nth-child(3) {</li>
+                <li>&nbsp;&nbsp;color: red;</li>
+                <li>}</li>
+              </ol>
+            </code>
+            <code>
+              <ol class="codes">
+                <li>li:nth-child(4n) {</li>
+                <li>&nbsp;&nbsp;color: red;</li>
+                <li>}</li>
+              </ol>
+            </code>
+            <p>위 예제는 li의 4번째 요소마다 선택</p>
+          </ul>
+        </article>
+        <article class="nth-last-child">
+          <ul>
+            <li>X:nth-last-child(n)</li>
+            <p>nth-child와 동일하지만 뒤에서부터 셈</p>
+            <code>
+              <ol class="codes">
+                <li>li:nth-last-child(2) {</li>
+                <li>&nbsp;&nbsp;color: black;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="nth-of-type">
+          <ul>
+            <li>X:nth-of-type(n)</li>
+            <p>X 요소중 n번째 요소만 선택</p>
+            <code>
+              <ol class="codes">
+                <li>ul:nth-of-type(3) {</li>
+                <li>&nbsp;&nbsp;border: 1px solid black;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="nth-last-of-type">
+          <ul>
+            <li>X:nth-last-of-type(n)</li>
+            <p>X 요소중 뒤에서 n번째 요소만 선택</p>
+            <code>
+              <ol class="codes">
+                <li>ul:nth-last-of-type(3) {</li>
+                <li>&nbsp;&nbsp;border: 1px solid black;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="first-child">
+          <ul>
+            <li>X:first-child</li>
+            <p>X 요소중 첫번째 자식 요소만 선택</p>
+            <p>
+              목록에서 맨 처음과 맨 나중 항목에서 테두리 선을 제거하는데 이
+              방식을 흔히 사용
+            </p>
+            <code>
+              <ol class="codes">
+                <li>ul li:first-child {</li>
+                <li>&nbsp;&nbsp;border-top: none;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="last-child">
+          <ul>
+            <li>X:last-child</li>
+            <p>X 요소중 마지막 자식 요소만 선택</p>
+            <p>
+              목록에서 맨 처음과 맨 나중 항목에서 테두리 선을 제거하는데 이
+              방식을 흔히 사용
+            </p>
+            <code>
+              <ol class="codes">
+                <li>ul > li:last-child {</li>
+                <li>&nbsp;&nbsp;color: green;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+        <article class="only-child">
+          <ul>
+            <li>X:only-child</li>
+            <p>단 하나의 자식만을 가진 태그 선택</p>
+            <p>거의 사용하지 않음</p>
+            <code>
+              <ol class="codes">
+                <li>ul > li:only-child {</li>
+                <li>&nbsp;&nbsp;color: red;</li>
+                <li>}</li>
+              </ol>
+            </code>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
