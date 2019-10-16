@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>HTML5 Cheat Sheet by juntwelfth</title>
+</head>
+
+<body>
+  <nav id="navbar">
+    <div class="left">
+      <a href="index.html"><img src="images/home.svg"/></a>
+    </div>
+    <div class="right">
+      <a href="#top"><img src="images/arrow_button.svg"/></a>
+    </div>
+  </nav>
+  <main>
+    <div class="lists">
+      <h6>마지막 수정내용 : Accessibility, SEO 추가<br>마지막 수정일 : 20191016</h6>
+      <h1 id="top">HTML5</h1>
+      <ul>
+        <li><a href="#doctype">Head</a></li>
+        <ul>
+          <li><a href="#meta">meta</a></li>
+          <li><a href="#style">style</a></li>
+          <li><a href="#script">script</a></li>
+          <li><a href="#link">link</a></li>
+          <li><a href="#title">title</a></li>
+        </ul>
+        <br />
+        <li><a href="#h">Body</a></li>
+        <ul>
+          <li><a href="#h">h</a></li>
+          <li><a href="#a">a</a></li>
+          <li><a href="#strong">strong</a></li>
+          <li><a href="#p">p</a></li>
+          <li><a href="#u">u</a></li>
+          <li><a href="#s">s</a></li>
+          <li><a href="#em">em</a></li>
+          <li><a href="#br">br</a></li>
+          <li><a href="#hr">hr</a></li>
+          <li><a href="#list">list</a></li>
+          <li><a href="#img">img</a></li>
+          <li><a href="#audio">audio</a></li>
+          <li><a href="#video">video</a></li>
+          <li><a href="#iframe">iframe</a></li>
+          <li><a href="#embed">embed</a></li>
+          <li><a href="#form">form</a></li>
+          <li><a href="#label">label</a></li>
+          <li><a href="#input">input</a></li>
+          <li><a href="#select">select</a></li>
+          <li><a href="#datalist">datalist</a></li>
+          <li><a href="#textarea">textarea</a></li>
+          <li><a href="#button">button</a></li>
+          <li><a href="#script">script</a></li>
+        </ul>
+        <br />
+        <li><a href="#header">Semantic</a></li>
+        <ul>
+          <li><a href="#header">header</a></li>
+          <li><a href="#nav">nav</a></li>
+          <li><a href="#main">main</a></li>
+          <li><a href="#section">section</a></li>
+          <li><a href="#article">article</a></li>
+          <li><a href="#span">span</a></li>
+          <li><a href="#figure">figure</a></li>
+          <li><a href="#aside">aside</a></li>
+          <li><a href="#div">div</a></li>
+          <li><a href="#footer">footer</a></li>
+        </ul>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="#seo">SEO</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div id="doctype">
+        <h4>&lt;!DOCTYPE html&gt;</h4>
+        <p>이 문서는 html로 쓰였다고 선언</p>
+        <br /><br /><br />
+      </div>
+      <div id="html">
+        <h4>&lt;html&gt;...&lt;/html&gt;</h4>
+        <p>HTML문서의 루트</p>
+        <p>다른 모든 요소들의 조상</p>
+        <ul>
+          <li>&lt;html lang="en"&gt;</li>
+        </ul>
+        <code>
+          <ol class="codes">
+            <li>&lt;html lang="en"&gt;<br /></li>
+            <li>&nbsp;&nbsp;&lt;head&gt;...&lt;head&gt;</li>
+            <li>&nbsp;&nbsp;&lt;body&gt;...&lt;body&gt;</li>
+            <li>&lt;/html&gt;<br /></li>
+          </ol>
+        </code>
+        <br /><br />
+      </div>
+      <div id="meta">
+        <h4>&lt;meta/&gt;</h4>
+        <p>메타데이터</p>
+        <ul>
+          <li>charset="utf-8"</li>
+          <p>웹 페이지의 인코딩 방식 (글자깨짐 방지)</p>
+          <li>name="description" content="내용"</li>
+          <p>검색 결과에 나타나는 페이지의 요약</p>
+          <li>name="keywords" content="내용"</li>
+          <p>문서를 설명할 수 있는 중요 키워드</p>
+          <li>name="author" content="내용"</li>
+          <p>저자를 나타내는 메타데이터</p>
+          <li>http-equiv="refresh" content="숫자"</li>
+          <p>지정한 시간(초)마다 웹페이지를 리프레쉬</p>
+          <li>name="viewport" content="width=device-width, initial-scale=1.0"</li>
+          <p>모바일에서 볼 수 있도록 도와주는 메타데이터</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="style">
+        <h4>&lt;style&gt;...&lt;/style&gt;</h4>
+        <p>CSS style 태그</p>
+        <ul>
+          <li>media="all"</li>
+          <p>스타일이 적용될 매체</p>
+          <li>type="text/css"</li>
+          <p>스타일 언어</p>
+          <li>scoped="false"</li>
+          <p>true = 문서 전체가 아닌 스타일 요소의 부모요소에서 나온 서브트리에만 적용</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="script">
+        <h4>&lt;script&gt;...&lt;/script&gt;</h4>
+        <p>Javascript의 내용</p>
+        <ul>
+          <li>src="#"</li>
+          <p>외부 js파일의 URI</p>
+          <li>type="text/javascript"</li>
+          <p>HTML5에선 생략가능</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="link">
+        <h4>&lt;link/&gt;</h4>
+        <p>다른 리소스와의 연결을 위해 사용</p>
+        <p>외부 스타일시트, 대체문서, 작성자를 지정하기 위해 사용</p>
+        <p class="tips">href, rel 속성은 필수</p>
+        <ul>
+          <li>rel="stylesheet"</li>
+          <p>링크된 대상의 관계</p>
+          <li>type="text/css"</li>
+          <p>MIME 타입</p>
+          <p>생략가능</p>
+          <li>media="screen"</li>
+          <p>어떤 매체에 적용되는지</p>
+          <li>href="#"</li>
+          <p>외부파일의 URI</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="title">
+        <h4>&lt;title&gt;...&lt;/title&gt;</h4>
+        <p>문서의 제목</p>
+        <p>한번만 유효</p>
+        <p class="tips">검색 결과에서 식별 가능</p>
+        <p class="tips">북마크, 탭 제목</p>
+        <br /><br /><br />
+      </div>
+      <div id="h">
+        <h4>&lt;h1~h6&gt;...&lt;/h1~h6&gt;</h4>
+        <p>제목</p>
+        <br /><br /><br />
+      </div>
+      <div id="a">
+        <h4>&lt;a&gt;...&lt;/a&gt;</h4>
+        <p>Anchor tag</p>
+        <p>링크를 연결</p>
+        <p>문단, 목록, 테이블뿐만 아니라 섹션 전체 wrap 가능</p>
+        <p class="tips">버튼, 링크 등 interactive 요소 포함 불가능</p>
+        <ul>
+          <li>href="#"</li>
+          <p>외부 링크 연결</p>
+          <li>target="_blank"</li>
+          <p>새 창에서 열기</p>
+          <li>target="_self"</li>
+          <p>현재 창에서 열기</p>
+          <li>target="_parent"</li>
+          <p>상위레벨 창에서 열기</p>
+          <li>target="_top"</li>
+          <p>parent와 비슷하지만 가장 상위레벨 창에서 열기</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="strong">
+        <h4>&lt;strong&gt;...&lt;/strong&gt;</h4>
+        <p>강조</p>
+        <p>b 태그도 글씨가 진해지지만 음성읽기 소프트웨어에서 다른 텍스트와 차이가없음</p>
+        <br /><br /><br />
+      </div>
+      <div id="p">
+        <h4>&lt;p&gt;...&lt;/p&gt;</h4>
+        <p>문단 나누기</p>
+        <br /><br /><br />
+      </div>
+      <div id="u">
+        <h4>&lt;u&gt;...&lt;/u&gt;</h4>
+        <p>밑줄</p>
+        <br /><br /><br />
+      </div>
+      <div id="s">
+        <h4>&lt;s&gt;...&lt;/s&gt;</h4>
+        <p>텍스트 줄긋기</p>
+        <br /><br /><br />
+      </div>
+      <div id="em">
+        <h4>&lt;em&gt;...&lt;/em&gt;</h4>
+        <p>이탤릭체</p>
+        <p>i 태그도 이탤릭체지만 음성읽기 소프트웨어에서 다른 텍스트와 차이가없음</p>
+        <br /><br /><br />
+      </div>
+      <div id="br">
+        <h4>&lt;br/&gt;</h4>
+        <p>줄 바꿈</p>
+        <p class="tips">문단을 나누려면 p태그를 이용</p>
+        <br /><br /><br />
+      </div>
+      <div id="hr">
+        <h4>&lt;hr/&gt;</h4>
+        <p>줄긋기</p>
+        <br /><br /><br />
+      </div>
+      <div id="list">
+        <h4>list</h4>
+        <ul>
+          <li>&lt;ol&gt;...&lt;/ol&gt;</li>
+          <li>&lt;li&gt;...&lt;/li&gt;</li>
+          <p>ordered list</p>
+          <p>넘버링 list</p>
+          <li>&lt;ul&gt;...&lt;/ul&gt;</li>
+          <li>&lt;li&gt;...&lt;/li&gt;</li>
+          <p>unordered list</p>
+          <p>넘버링이 되지 않은 list</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="img">
+        <h4>&lt;img/&gt;</h4>
+        <p>이미지</p>
+        <p class="tips">alt attribute 권장</p>
+        <ul>
+          <li>src="#"</li>
+          <p>source, 이미지의 주소</p>
+          <li>alt="text"</li>
+          <p>이미지 로드 실패 시 나타낼 텍스트</p>
+          <li>width="n" height="n"</li>
+          <p>너비와 높이 설정</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="audio">
+        <h4>&lt;audio&gt;...&lt;/audio&gt;</h4>
+        <p>오디오</p>
+        <ul>
+          <li>src="#"</li>
+          <p>source, 오디오의 주소</p>
+          <li>controls</li>
+          <p>오디오 컨트롤 지원</p>
+          <li>type="audio/mp3"</li>
+          <p>오디오의 타입 지정</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="video">
+        <h4>&lt;video&gt;...&lt;/video&gt;</h4>
+        <p>동영상</p>
+        <p>video 태그 사이에 설명을 넣어주면 동영상 로드 실패 시 나옴</p>
+        <ul>
+          <li>src="#"</li>
+          <p>source, 동영상의 주소</p>
+          <li>controls</li>
+          <p>동영상 컨트롤 지원</p>
+          <li>width="n" height="n"</li>
+          <p>너비와 높이 설정</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="iframe">
+        <h4>&lt;iframe&gt;...&lt;/iframe&gt;</h4>
+        <p>문서에 다른 웹 문서 넣기 가능</p>
+        <p>동영상도 가능</p>
+        <p>동영상로드 실패 시 텍스트가 보여짐</p>
+        <ul>
+          <li>src="#"</li>
+          <p>source</p>
+          <li>width="" height=""</li>
+          <p>폭, 높이 지정</p>
+          <li>frameborder=""</li>
+          <p>border두께 지정</p>
+          <li>scrolling="yes"</li>
+          <p>스크롤바 사용여부</p>
+          <li>name=""</li>
+          <p>프레임 안에 표시될 페이지의 이름을 나타냄</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="embed">
+        <h4>&lt;embed/&gt;</h4>
+        <p>여러가지 외부파일</p>
+        <ul>
+          <li>src="#"</li>
+          <p>source, 오디오의 주소</p>
+          <li>controls</li>
+          <p>오디오 컨트롤 지원</p>
+          <li>type="audio/mp3"</li>
+          <p>오디오의 타입 지정</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="form">
+        <h4>&lt;form&gt;...&lt;/form&gt;</h4>
+        <p>사용자의 정보를 수집하고 외부 소스로 전송하는 요소</p>
+        <p>여러가지 input요소 포함가능</p>
+        <p>사용자가 submit했을 때 input요소들의 정보를 action 속성의 소스로 전송함</p>
+        <ul>
+          <li>action="$"</li>
+          <p>필수속성</p>
+          <p>필드의 내용을 처리하는 프로그램의 URI지정</p>
+          <li>method=""</li>
+          <p>폼의 내용을 처리하는 방법 지정</p>
+          <p>POST: 폼의 본문으로 송신</p>
+          <p>GET: action에서 지정한 URI에 폼의 내용을 '?'로 구분으로 추가하여 송신</p>
+          <li>name=""</li>
+          <p>링크나 스크립트로부터 이 폼을 창조할 수 있게 식별자 지정</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="label">
+        <h4>&lt;label&gt;...&lt;/label&gt;</h4>
+        <p>폼의 양식에 이름 붙이는 태그</p>
+        <p>label의 for와 input의 id값이 같으면 연결됨</p>
+        <p>label을 클릭하면 연결된 양식을 보여줌</p>
+        <p>체크를 하거나 체크를 해제할 수 있음</p>
+        <p>label 태그 사이에 텍스트를 입력, input 설명 가능</p>
+        <ul>
+          <li>for=""</li>
+          <p>필수속성</p>
+          <p>label과 input을 연결시켜줌</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="input">
+        <h4>&lt;input/&gt;</h4>
+        <p>폼 안에 기본적인 컨트롤 생성</p><br>
+        <ul>
+          <li>type="number"</li>
+          <input type="number"><br>
+          <p>숫자 인풋</p>
+          <li>type="text"</li>
+          <input type="text"><br>
+          <p>텍스트 인풋</p>
+          <li>type="password"</li>
+          <input type="password"><br>
+          <p>비밀번호 인풋</p>
+          <li>type="checkbox"</li>
+          <input type="checkbox"><br>
+          <p>체크박스 버튼</p>
+          <p>여러개 선택 가능</p>
+          <li>type="radio"</li>
+          <input type="radio"><br>
+          <p>라디오 버튼</p>
+          <p>하나만 선택 가능</p>
+          <li>type="submit"</li>
+          <input type="submit"><br>
+          <p>submit 버튼</p>
+          <li>type="reset"</li>
+          <input type="reset"><br>
+          <p>리셋 버튼</p>
+          <li>type="button"</li>
+          <input type="button"><br>
+          <p>일반 버튼</p>
+          <li>type="image" src="#"</li>
+          <input type="image" src="https://images.unsplash.com/photo-1565502233391-e4ff4ed6bf4b?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" width="40px" height="40px"><br>
+          <p>이미지를 버튼으로</p>
+          <li>type="range"</li>
+          <input type="range"><br>
+          <p>슬라이더</p>
+          <p>min, max, step attribute 적용가능</p>
+          <li>type="file"</li>
+          <input type="file"><br>
+          <p>파일 이름 입력</p>
+          <li>type="hidden"</li>
+          <input type="hidden"><br>
+          <p>사용자에게 보이지 않음</p>
+          <li>name=""</li>
+          <p>컨트롤 이름 지정</p>
+          <p>type 속성이 radio, checkbox일 때 name이 같은 값이면 하나의 그룹으로 취급</p>
+          <li>value=""</li>
+          <p>컨트롤 종류에 따라 default값 지정</p>
+          <li>size=""</li>
+          <p>컨트롤의 폭 지정</p>
+          <p>type 속성이 text, password일 경우 문자수를 지정</p>
+          <p>그 외엔 가로폭의 픽셀값을 지정</p>
+          <li>width="" height=""</li>
+          <p>가로폭, 높이 지정</p>
+          <li>min="" max=""</li>
+          <li>minlength="" maxlength=""</li>
+          <p>최소 최대값 지정</p>
+          <li>required</li>
+          <p>필수 입력 항목 지정</p>
+          <li>pattern</li>
+          <p>[0-9]{14,16} [a-zA-Z0-9]</p>
+          <p>데이터포맷 제한</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="select">
+        <h4>&lt;select&gt;...&lt;/select&gt;</h4>
+        <p>dropdown list</p>
+        <p>select 태그 하위 option 태그를 만들어서 생성 가능</p>
+        <ul>
+          <li>id=""</li>
+          <p>label의 for와 연결</p>
+          <li>&lt;option value="pizza"&gt;Pizza&lt;/option&gt;</li>
+          <p>Pizza라고 하는 옵션을 만듦</p>
+          <li>selected="selected"</li>
+          <p>default 선택값 지정</p>
+          <li>optgroup label=""</li>
+          <p>option내 하위 option 생성</p>
+          <li>
+            <select id="select">
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="juntwelfth" selected="selected">juntwelfth</option>
+              <optgroup label="junil">
+                <option value="jun12s">jun12s</option>
+                <option value="j12">j12</option>
+              </optgroup>
+            </select>
+          </li>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="datalist">
+        <h4>&lt;datalist/&gt;</h4>
+        <p>form 요소에서 미리 지정된 옵션 목록 제공</p>
+        <p>사용자가 특정 글자를 입력하면 그에 해당되는 미리 지정된 목록을 보여줌</p>
+        <p>label이 아닌 input의 list=""를 이용하여 연결</p>
+        <ul>
+          <li>id=""</li>
+          <p>input의 list와 연결</p>
+          <li>&lt;option value="pizza"&gt;Pizza&lt;/option&gt;</li>
+          <p>Pizza라고 하는 옵션을 만듦</p>
+          <li>
+            <input type="text" list="dlist">
+          <datalist id="dlist">
+            <option value="가나다라마바사">이렇게</option>
+            <option value="abcdefg">저렇게</option>
+            <option value="1234567">요렇게</option>
+            <option value="pizza">Pizza</option>
+          </datalist>
+          </li>
+          
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="textarea">
+        <h4>&lt;textarea&gt;...&lt;/textarea&gt;</h4>
+        <p>text를 작성할 수 있는 area 생성</p>
+        <p>textare 태그 사이에 default text 지정가능</p>
+        <ul>
+          <li>id=""</li>
+          <p>label의 for와 연결</p>
+          <li>rows="n" cols="n"</li>
+          <p>n행 n열 지정</p>
+          <li>
+            <textarea name="Write Here" cols="20" rows="5">Write here..</textarea>
+          </li>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="button">
+        <h4>&lt;button&gt;...&lt;/button&gt;</h4>
+        <p>input 버튼과는 달리 이미지나 텍스트 포함 가능</p>
+        <p>유연한 디자인 가능</p>
+        <ul>
+          <li>autofocus=""</li>
+          <p>페이지 로드 시 해당 요소 포커싱 지정</p>
+          <li>disabled=""</li>
+          <p>boolean</p><br>
+          <p>포커스 선택, 변경등 조작이 불가능하게 함</p>
+          <p>데이터를 서버에 전송하지 않음</p>
+          <li>name=""</li>
+          <p>버튼의 식별자 지정</p>
+          <li>type="submit"</li>
+          <p>default</p>
+          <li>type="reset"</li>
+          <li>type="button"</li>
+          <p>아무것도 하지않음</p>
+          <li>value=""</li>
+          <p>전송되는 데이터의 default값 지정</p>
+          <li>
+            <button type="reset"></button>
+          </li>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="header">
+        <h4>&lt;header&gt;...&lt;/header&gt;</h4>
+        <p>문서의 정보를 담는태그, 페이지 상단에 위치</p>
+        <p>주로 제목요소, 사이트로고, 회원가입 링크 등 포함</p>
+        <p>nav요소 포함 가능, 한 문서안 여러개 header요소 존재 가능</p>
+        <p>footer, address, 또다른 header 포함 불가능</p>
+        <br /><br /><br />
+      </div>
+      <div id="nav">
+        <h4>&lt;nav&gt;...&lt;/nav&gt;</h4>
+        <p>네비게이션 링크로 구성된 섹션</p>
+        <p>보통 메뉴 영역으로 사용</p>
+        <p>ul, li, a 요소들을 함께 사용해야함</p>
+        <p>검색엔진 색인에 도움이 됨</p>
+        <br /><br /><br />
+      </div>
+      <div id="main">
+        <h4>&lt;main&gt;...&lt;/main&gt;</h4>
+        <p>문서의 &lt;body&gt; 요소의 주 컨텐츠를 정의할 때 사용</p>
+        <p>중심 주제, 주요 기능과 직접적으로 관련되어 있는 컨텐츠</p>
+        <p class="tips">반복되는 내용 사용 지양</p>
+        <p>문서엔 단 하나의 &lt;main&gt; 요소만이 존재 가능</p>
+        <p>&lt;article&gt; &lt;aside&gt; &lt;footer&gt; &lt;header&gt; &lt;nav&gt; 의 자손이 될 수 없음</p>
+        <br /><br /><br />
+      </div>
+      <div id="section">
+        <h4>&lt;section&gt;...&lt;/section&gt;</h4>
+        <p>문법상 반드시 제목요소를 가져야 함</p>
+        <p>내용의 흐름과 구조를 만들 수 있음</p>
+        <p>같은성격의 내용, 관련있는 내용을 묶어 표시할 수 있음</p>
+        <br /><br /><br />
+      </div>
+      <div id="article">
+        <h4>&lt;article&gt;...&lt;/article&gt;</h4>
+        <p>본문과 별개로 구성, 다른 영역에 영향을 주거나 받지않음</p>
+        <p>독립적으로 배포되거나 재사용 가능</p>
+        <p>게시판의 게시물, 블로그 포스트, 댓글등이 포함됨</p>
+        <p>section요소의 내용 중 독립적으로 구성된 글을 별도로 묶는 역할</p>
+        <br /><br /><br />
+      </div>
+      <div id="span">
+        <h4>&lt;span&gt;...&lt;/span&gt;</h4>
+        <p>div와 같이 특별한 의미는 없음</p>
+        <p>class, lang, dir등의 전역속성과 함께 사용하면 유용</p>
+        <br /><br /><br />
+      </div>
+      <div id="figure">
+        <h4>&lt;figure&gt;...&lt;/figure&gt;</h4>
+        <p>책, 잡지에서 이미지, 차트 등의 섹션</p>
+        <h5>&lt;figcaption&gt;...&lt;/figcaption&gt;</h5>
+        <p>figure섹션에서 설명하는 섹션</p>
+        <p>선택적, figure요소 안에 사용함</p>
+        <p>내용 앞뒤로 올 수 있고 figure요소 안에선 한번만 사용가능</p>
+        <p>img, code등 여러 자식요소 포함가능</p>
+        <br /><br /><br />
+      </div>
+      <div id="aside">
+        <h4>&lt;aside&gt;...&lt;/aside&gt;</h4>
+        <p>주로 사이드바에 위치</p>
+        <p>배너, 용어설명, 관련상품 등 본문의 내용과 관련이 적은 내용으로 구성</p>
+        <p>검색엔진이 무시함</p>
+        <br /><br /><br />
+      </div>
+      <div id="div">
+        <h4>&lt;div&gt;...&lt;/div&gt;</h4>
+        <p>태그 자체 특별한 의미는 없음</p>
+        <p>문서의 영역을 지정할 때 사용</p>
+        <p>같은 섹션에 포함된 여러개의 문단 스타일링 가능</p>
+        <p class="tips">접근성이 안좋고 관리가 어려움</p>
+        <p class="tips">다른 적절한 요소가 없을 때 사용하길 강력히 권장</p>
+        <p>블로그 포스트는 article, 챕터는 section, 페이지 네비게이션은 nav, 폼 컨트롤은 filedset을 div 대신 사용</p>
+        <br /><br /><br />
+      </div> 
+      <div id="footer">
+        <h4>&lt;footer&gt;...&lt;/footer&gt;</h4>
+        <p>주로 저작권 정보, 서비스 제공자 정보를 나타냄</p>
+        <p>연락정보는 address요소에 담는것이 적당함</p>
+        <br /><br /><br />
+      </div>
+      <div id="script">
+        <h4>&lt;script&gt;...&lt;/script&gt;</h4>
+        <p>Javascript와 같은 클라이언트 스크립트 정의</p>
+        <br /><br /><br />
+      </div>
+      <div id="accessibility">
+        <h4>HTML Accessibility</h4>
+        <ul>
+          <li>&lt;img alt=""&gt;</li>
+          <p>유용한 정보</p>
+          <p>기능 수행</p>
+          <p>가독성 향상</p>
+          <li>Clear Language</li>
+          <p>Instead of writing 5–7, write 5 to 7</p>
+          <p>Instead of writing Jan, write January</p>
+          <p>Instead of writing HTML in the first instance, write Hypertext Markup Language</p>
+          <p>Avoid slang words</p>
+          <p>Keep sentences as short as possible</p>
+          <li>Declare the Language</li>
+          <p>&lt;html lang="en"&gt;</p>
+          <p>검색엔진, 스크린리더에게 중요함</p>
+          <li>Write Good Links
+            <ul>
+              <li>Bad Links</li>
+              <p>Click here</p>
+              <p>Read more...</p>
+              <li>Good Links</li>
+              <p>Find out more about the HTML language</p><br>
+              <p>Read more about how to eat healthy</p><br>
+              <p>Buy tickets to Mars here</p><br>
+            </ul>
+          </li>
+          <li>Link Titles</li>
+          <p>&lt;a title="Go to Google.com"&gt;</p>
+          <li>Button</li>
+          <p>Focusable</p>
+          <p>Clickable (with mouse and keys)</p>
+          <p>Screen readers identify them as buttons</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+      <div id="seo">
+        <h4>Search Engine Optimization</h4>
+        <p>HTML의 meta태그를 이용한 검색엔진 최적화기술</p>
+        <ul>
+          <li>&lt;title&gt;...&lt;/title&gt;</li>
+          <p>검색엔진의 제목부분에 표시되는 아주 중요한 정보</p>
+          <p>검색결과에 반영됨</p>
+          <p>주로 결과의 첫번째 행에 나타남</p>
+          <p>페이지의 컨텐츠를 정확하게 설명하고 간결해야 함</p>
+          <p>페이지마다 고유한 title을 작성해줘야 함</p>
+          <li>&lt;meta name="description" content=""&gt;</li>
+          <p>검색시 짧은 단락, 1~2개의 문장으로 정보가 요약되는 부분</p>
+          <li>&lt;meta name="keywords" content=""&gt;</li>
+          <p>페이지의 중요한 키워드</p>
+          <li>URL</li>
+          <p>좀 더 알아보기 쉽고 좋게 만들기</p>
+          <p>URL에 컨텐츠의 내용을 포함하기 ex) google.com/news</p>
+          <p>반복 피하기 ex) google.com/news-todaynews-news</p>
+          <p>한 페이지에 여러 URL 존재할 경우, 대표 URL(Canonical URL)을 사용</p>
+          <p>나머지 URL은 리다이렉션 시키기</p>
+          <p>ex) www.example.com과 example.com 둘 다 가능한 경우 둘 중 하나를 대표 URL로 지정하기</p>
+          <li>Link</li>
+          <p>링크를 통해 다른 페이지로 이동하게 만들기</p>
+          <p>검색엔진에 노출을 많이 시키려면 링크를 많이 포함하기</p>
+          <p>사이트 내의 이동은 하이퍼텍스트 이용</p>
+          <p>검색엔진이 아닌 사용자를 위한 컨텐츠 작성하기</p>
+          <li>&lt;h1...h6&gt;</li>
+          <p>한 페이지내에 너무 많은 제목태그 사용 피하기</p>
+          <li>오류 페이지</li>
+          <p>사이트에 알맞는 맞춤형 오류 페이지를 제공</p>
+          <p>HTTP 상태코드 역시 규약에 따라 알맞게 제공하기</p>
+          <li>rel="nofollow", robots meta tag</li>
+          <p>앵커 태그에서 검색엔진이 따라가기를 원치 않는 경우 rel="nofollow" 추가하기</p>
+          <p>페이지 단위 접근을 막기위해선 meta tag에 name="robots" content="noindex" 추가</p>
+        </ul>
+        <br /><br /><br />
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
